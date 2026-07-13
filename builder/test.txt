@@ -1,0 +1,497 @@
+   Compiling derive_builder v0.0.0 (/Users/elyzk1/programming/rust/proc-macro-workshop/builder)
+warning: unused import: `std::rc::Rc`
+ --> builder/src/lib.rs:1:5
+  |
+1 | use std::rc::Rc;
+  |     ^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `token::Token`
+ --> builder/src/lib.rs:6:24
+  |
+6 |     parse_macro_input, token::Token, Data, DeriveInput, Field, Fields, GenericArgument, Ident,
+  |                        ^^^^^^^^^^^^
+
+warning: unused variable: `field_types`
+   --> builder/src/lib.rs:122:9
+    |
+122 |     let field_types = data.get_ty();
+    |         ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_field_types`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+warning: `derive_builder` (lib test) generated 3 warnings (2 duplicates)
+warning: `derive_builder` (lib) generated 3 warnings (1 duplicate) (run `cargo fix --lib -p derive_builder` to apply 2 suggestions)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.50s
+     Running unittests src/lib.rs (/Users/elyzk1/programming/rust/proc-macro-workshop/target/debug/deps/derive_builder-74ceb5eb13fdd060)
+     Running tests/progress.rs (/Users/elyzk1/programming/rust/proc-macro-workshop/target/debug/deps/tests-a971f34d0dbceebb)
+   Compiling derive_builder v0.0.0 (/Users/elyzk1/programming/rust/proc-macro-workshop/builder)
+warning: unused import: `std::rc::Rc`
+ --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:1:5
+  |
+1 | use std::rc::Rc;
+  |     ^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `token::Token`
+ --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:6:24
+  |
+6 |     parse_macro_input, token::Token, Data, DeriveInput, Field, Fields, GenericArgument, Ident,
+  |                        ^^^^^^^^^^^^
+
+warning: unused variable: `field_types`
+   --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:122:9
+    |
+122 |     let field_types = data.get_ty();
+    |         ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_field_types`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+warning: `derive_builder` (lib) generated 3 warnings (run `cargo fix --lib -p derive_builder` to apply 2 suggestions)
+   Compiling derive_builder-tests v0.0.0 (/Users/elyzk1/programming/rust/proc-macro-workshop/target/tests/trybuild/derive_builder)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.41s
+
+
+test [0m[1mtests/01-parse.rs[0m ... [0m[32mok
+[0m
+[0m[1m[33mSTDERR:
+[0m[33m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+[0m[33mwarning: unused import: `std::rc::Rc`
+[0m[33m --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:1:5
+[0m[33m  |
+[0m[33m1 | use std::rc::Rc;
+[0m[33m  |     ^^^^^^^^^^^
+[0m[33m  |
+[0m[33m  = note: `#[warn(unused_imports)]` on by default
+[0m[33m
+[0m[33mwarning: unused import: `token::Token`
+[0m[33m --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:6:24
+[0m[33m  |
+[0m[33m6 |     parse_macro_input, token::Token, Data, DeriveInput, Field, Fields, GenericArgument, Ident,
+[0m[33m  |                        ^^^^^^^^^^^^
+[0m[33m
+[0m[33mwarning: unused variable: `field_types`
+[0m[33m   --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:122:9
+[0m[33m    |
+[0m[33m122 |     let field_types = data.get_ty();
+[0m[33m    |         ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_field_types`
+[0m[33m    |
+[0m[33m    = note: `#[warn(unused_variables)]` on by default
+[0m[33m
+[0m[33mEYYYY
+[0m[33mIMPL: impl Command
+[0m[33m{
+[0m[33m    pub fn builder() -> CommandBuilder
+[0m[33m    {
+[0m[33m        CommandBuilder
+[0m[33m        { executable : None, args : None, env : None, current_dir : None, }
+[0m[33m    }
+[0m[33m}
+[0m[33mTOKENS: impl Command
+[0m[33m{
+[0m[33m    pub fn builder() -> CommandBuilder
+[0m[33m    {
+[0m[33m        CommandBuilder
+[0m[33m        { executable : None, args : None, env : None, current_dir : None, }
+[0m[33m    }
+[0m[33m} pub struct CommandBuilder
+[0m[33m{
+[0m[33m    executable : std :: option :: Option < String > , args : std :: option ::
+[0m[33m    Option < Vec < String > > , env : std :: option :: Option < Vec < String >
+[0m[33m    > , current_dir : std :: option :: Option < String > ,
+[0m[33m} impl CommandBuilder
+[0m[33m{
+[0m[33m    fn executable(& mut self, executable : String) -> & mut Self
+[0m[33m    { self.executable = std :: option :: Option :: Some(executable); self } fn
+[0m[33m    args(& mut self, args : Vec < String >) -> & mut Self
+[0m[33m    { self.args = std :: option :: Option :: Some(args); self } fn
+[0m[33m    env(& mut self, env : Vec < String >) -> & mut Self
+[0m[33m    { self.env = std :: option :: Option :: Some(env); self } fn
+[0m[33m    current_dir(& mut self, current_dir : String) -> & mut Self
+[0m[33m    { self.current_dir = std :: option :: Option :: Some(current_dir); self }
+[0m[33m    pub fn build(& mut self) -> Result < Command, Box < dyn std :: error ::
+[0m[33m    Error >>
+[0m[33m    {
+[0m[33m        if self.executable.is_none() && ! false || self.args.is_none() && !
+[0m[33m        false || self.env.is_none() && ! false || self.current_dir.is_none()
+[0m[33m        && ! false || false { Err("Field is not set") ? }
+[0m[33m        Ok(Command
+[0m[33m        {
+[0m[33m            executable : self.executable.clone().unwrap(), args :
+[0m[33m            self.args.clone().unwrap(), env : self.env.clone().unwrap(),
+[0m[33m            current_dir : self.current_dir.clone().unwrap(),
+[0m[33m        })
+[0m[33m    }
+[0m[33m}
+[0m[33m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+[0m
+test [0m[1mtests/02-create-builder.rs[0m ... [0m[32mok
+[0m
+[0m[1m[33mSTDERR:
+[0m[33m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+[0m[33mwarning: unused import: `std::rc::Rc`
+[0m[33m --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:1:5
+[0m[33m  |
+[0m[33m1 | use std::rc::Rc;
+[0m[33m  |     ^^^^^^^^^^^
+[0m[33m  |
+[0m[33m  = note: `#[warn(unused_imports)]` on by default
+[0m[33m
+[0m[33mwarning: unused import: `token::Token`
+[0m[33m --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:6:24
+[0m[33m  |
+[0m[33m6 |     parse_macro_input, token::Token, Data, DeriveInput, Field, Fields, GenericArgument, Ident,
+[0m[33m  |                        ^^^^^^^^^^^^
+[0m[33m
+[0m[33mwarning: unused variable: `field_types`
+[0m[33m   --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:122:9
+[0m[33m    |
+[0m[33m122 |     let field_types = data.get_ty();
+[0m[33m    |         ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_field_types`
+[0m[33m    |
+[0m[33m    = note: `#[warn(unused_variables)]` on by default
+[0m[33m
+[0m[33mEYYYY
+[0m[33mIMPL: impl Command
+[0m[33m{
+[0m[33m    pub fn builder() -> CommandBuilder
+[0m[33m    {
+[0m[33m        CommandBuilder
+[0m[33m        { executable : None, args : None, env : None, current_dir : None, }
+[0m[33m    }
+[0m[33m}
+[0m[33mTOKENS: impl Command
+[0m[33m{
+[0m[33m    pub fn builder() -> CommandBuilder
+[0m[33m    {
+[0m[33m        CommandBuilder
+[0m[33m        { executable : None, args : None, env : None, current_dir : None, }
+[0m[33m    }
+[0m[33m} pub struct CommandBuilder
+[0m[33m{
+[0m[33m    executable : std :: option :: Option < String > , args : std :: option ::
+[0m[33m    Option < Vec < String > > , env : std :: option :: Option < Vec < String >
+[0m[33m    > , current_dir : std :: option :: Option < String > ,
+[0m[33m} impl CommandBuilder
+[0m[33m{
+[0m[33m    fn executable(& mut self, executable : String) -> & mut Self
+[0m[33m    { self.executable = std :: option :: Option :: Some(executable); self } fn
+[0m[33m    args(& mut self, args : Vec < String >) -> & mut Self
+[0m[33m    { self.args = std :: option :: Option :: Some(args); self } fn
+[0m[33m    env(& mut self, env : Vec < String >) -> & mut Self
+[0m[33m    { self.env = std :: option :: Option :: Some(env); self } fn
+[0m[33m    current_dir(& mut self, current_dir : String) -> & mut Self
+[0m[33m    { self.current_dir = std :: option :: Option :: Some(current_dir); self }
+[0m[33m    pub fn build(& mut self) -> Result < Command, Box < dyn std :: error ::
+[0m[33m    Error >>
+[0m[33m    {
+[0m[33m        if self.executable.is_none() && ! false || self.args.is_none() && !
+[0m[33m        false || self.env.is_none() && ! false || self.current_dir.is_none()
+[0m[33m        && ! false || false { Err("Field is not set") ? }
+[0m[33m        Ok(Command
+[0m[33m        {
+[0m[33m            executable : self.executable.clone().unwrap(), args :
+[0m[33m            self.args.clone().unwrap(), env : self.env.clone().unwrap(),
+[0m[33m            current_dir : self.current_dir.clone().unwrap(),
+[0m[33m        })
+[0m[33m    }
+[0m[33m}
+[0m[33m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+[0m
+test [0m[1mtests/03-call-setters.rs[0m ... [0m[32mok
+[0m
+[0m[1m[33mSTDERR:
+[0m[33m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+[0m[33mwarning: unused import: `std::rc::Rc`
+[0m[33m --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:1:5
+[0m[33m  |
+[0m[33m1 | use std::rc::Rc;
+[0m[33m  |     ^^^^^^^^^^^
+[0m[33m  |
+[0m[33m  = note: `#[warn(unused_imports)]` on by default
+[0m[33m
+[0m[33mwarning: unused import: `token::Token`
+[0m[33m --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:6:24
+[0m[33m  |
+[0m[33m6 |     parse_macro_input, token::Token, Data, DeriveInput, Field, Fields, GenericArgument, Ident,
+[0m[33m  |                        ^^^^^^^^^^^^
+[0m[33m
+[0m[33mwarning: unused variable: `field_types`
+[0m[33m   --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:122:9
+[0m[33m    |
+[0m[33m122 |     let field_types = data.get_ty();
+[0m[33m    |         ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_field_types`
+[0m[33m    |
+[0m[33m    = note: `#[warn(unused_variables)]` on by default
+[0m[33m
+[0m[33mEYYYY
+[0m[33mIMPL: impl Command
+[0m[33m{
+[0m[33m    pub fn builder() -> CommandBuilder
+[0m[33m    {
+[0m[33m        CommandBuilder
+[0m[33m        { executable : None, args : None, env : None, current_dir : None, }
+[0m[33m    }
+[0m[33m}
+[0m[33mTOKENS: impl Command
+[0m[33m{
+[0m[33m    pub fn builder() -> CommandBuilder
+[0m[33m    {
+[0m[33m        CommandBuilder
+[0m[33m        { executable : None, args : None, env : None, current_dir : None, }
+[0m[33m    }
+[0m[33m} pub struct CommandBuilder
+[0m[33m{
+[0m[33m    executable : std :: option :: Option < String > , args : std :: option ::
+[0m[33m    Option < Vec < String > > , env : std :: option :: Option < Vec < String >
+[0m[33m    > , current_dir : std :: option :: Option < String > ,
+[0m[33m} impl CommandBuilder
+[0m[33m{
+[0m[33m    fn executable(& mut self, executable : String) -> & mut Self
+[0m[33m    { self.executable = std :: option :: Option :: Some(executable); self } fn
+[0m[33m    args(& mut self, args : Vec < String >) -> & mut Self
+[0m[33m    { self.args = std :: option :: Option :: Some(args); self } fn
+[0m[33m    env(& mut self, env : Vec < String >) -> & mut Self
+[0m[33m    { self.env = std :: option :: Option :: Some(env); self } fn
+[0m[33m    current_dir(& mut self, current_dir : String) -> & mut Self
+[0m[33m    { self.current_dir = std :: option :: Option :: Some(current_dir); self }
+[0m[33m    pub fn build(& mut self) -> Result < Command, Box < dyn std :: error ::
+[0m[33m    Error >>
+[0m[33m    {
+[0m[33m        if self.executable.is_none() && ! false || self.args.is_none() && !
+[0m[33m        false || self.env.is_none() && ! false || self.current_dir.is_none()
+[0m[33m        && ! false || false { Err("Field is not set") ? }
+[0m[33m        Ok(Command
+[0m[33m        {
+[0m[33m            executable : self.executable.clone().unwrap(), args :
+[0m[33m            self.args.clone().unwrap(), env : self.env.clone().unwrap(),
+[0m[33m            current_dir : self.current_dir.clone().unwrap(),
+[0m[33m        })
+[0m[33m    }
+[0m[33m}
+[0m[33m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+[0m
+test [0m[1mtests/04-call-build.rs[0m ... [0m[32mok
+[0m
+[0m[1m[33mSTDERR:
+[0m[33m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+[0m[33mwarning: unused import: `std::rc::Rc`
+[0m[33m --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:1:5
+[0m[33m  |
+[0m[33m1 | use std::rc::Rc;
+[0m[33m  |     ^^^^^^^^^^^
+[0m[33m  |
+[0m[33m  = note: `#[warn(unused_imports)]` on by default
+[0m[33m
+[0m[33mwarning: unused import: `token::Token`
+[0m[33m --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:6:24
+[0m[33m  |
+[0m[33m6 |     parse_macro_input, token::Token, Data, DeriveInput, Field, Fields, GenericArgument, Ident,
+[0m[33m  |                        ^^^^^^^^^^^^
+[0m[33m
+[0m[33mwarning: unused variable: `field_types`
+[0m[33m   --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:122:9
+[0m[33m    |
+[0m[33m122 |     let field_types = data.get_ty();
+[0m[33m    |         ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_field_types`
+[0m[33m    |
+[0m[33m    = note: `#[warn(unused_variables)]` on by default
+[0m[33m
+[0m[33mEYYYY
+[0m[33mIMPL: impl Command
+[0m[33m{
+[0m[33m    pub fn builder() -> CommandBuilder
+[0m[33m    {
+[0m[33m        CommandBuilder
+[0m[33m        { executable : None, args : None, env : None, current_dir : None, }
+[0m[33m    }
+[0m[33m}
+[0m[33mTOKENS: impl Command
+[0m[33m{
+[0m[33m    pub fn builder() -> CommandBuilder
+[0m[33m    {
+[0m[33m        CommandBuilder
+[0m[33m        { executable : None, args : None, env : None, current_dir : None, }
+[0m[33m    }
+[0m[33m} pub struct CommandBuilder
+[0m[33m{
+[0m[33m    executable : std :: option :: Option < String > , args : std :: option ::
+[0m[33m    Option < Vec < String > > , env : std :: option :: Option < Vec < String >
+[0m[33m    > , current_dir : std :: option :: Option < String > ,
+[0m[33m} impl CommandBuilder
+[0m[33m{
+[0m[33m    fn executable(& mut self, executable : String) -> & mut Self
+[0m[33m    { self.executable = std :: option :: Option :: Some(executable); self } fn
+[0m[33m    args(& mut self, args : Vec < String >) -> & mut Self
+[0m[33m    { self.args = std :: option :: Option :: Some(args); self } fn
+[0m[33m    env(& mut self, env : Vec < String >) -> & mut Self
+[0m[33m    { self.env = std :: option :: Option :: Some(env); self } fn
+[0m[33m    current_dir(& mut self, current_dir : String) -> & mut Self
+[0m[33m    { self.current_dir = std :: option :: Option :: Some(current_dir); self }
+[0m[33m    pub fn build(& mut self) -> Result < Command, Box < dyn std :: error ::
+[0m[33m    Error >>
+[0m[33m    {
+[0m[33m        if self.executable.is_none() && ! false || self.args.is_none() && !
+[0m[33m        false || self.env.is_none() && ! false || self.current_dir.is_none()
+[0m[33m        && ! false || false { Err("Field is not set") ? }
+[0m[33m        Ok(Command
+[0m[33m        {
+[0m[33m            executable : self.executable.clone().unwrap(), args :
+[0m[33m            self.args.clone().unwrap(), env : self.env.clone().unwrap(),
+[0m[33m            current_dir : self.current_dir.clone().unwrap(),
+[0m[33m        })
+[0m[33m    }
+[0m[33m}
+[0m[33m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+[0m
+test [0m[1mtests/05-method-chaining.rs[0m ... [0m[32mok
+[0m
+[0m[1m[33mSTDERR:
+[0m[33m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+[0m[33mwarning: unused import: `std::rc::Rc`
+[0m[33m --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:1:5
+[0m[33m  |
+[0m[33m1 | use std::rc::Rc;
+[0m[33m  |     ^^^^^^^^^^^
+[0m[33m  |
+[0m[33m  = note: `#[warn(unused_imports)]` on by default
+[0m[33m
+[0m[33mwarning: unused import: `token::Token`
+[0m[33m --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:6:24
+[0m[33m  |
+[0m[33m6 |     parse_macro_input, token::Token, Data, DeriveInput, Field, Fields, GenericArgument, Ident,
+[0m[33m  |                        ^^^^^^^^^^^^
+[0m[33m
+[0m[33mwarning: unused variable: `field_types`
+[0m[33m   --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:122:9
+[0m[33m    |
+[0m[33m122 |     let field_types = data.get_ty();
+[0m[33m    |         ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_field_types`
+[0m[33m    |
+[0m[33m    = note: `#[warn(unused_variables)]` on by default
+[0m[33m
+[0m[33mEYYYY
+[0m[33mIMPL: impl Command
+[0m[33m{
+[0m[33m    pub fn builder() -> CommandBuilder
+[0m[33m    {
+[0m[33m        CommandBuilder
+[0m[33m        { executable : None, args : None, env : None, current_dir : None, }
+[0m[33m    }
+[0m[33m}
+[0m[33mTOKENS: impl Command
+[0m[33m{
+[0m[33m    pub fn builder() -> CommandBuilder
+[0m[33m    {
+[0m[33m        CommandBuilder
+[0m[33m        { executable : None, args : None, env : None, current_dir : None, }
+[0m[33m    }
+[0m[33m} pub struct CommandBuilder
+[0m[33m{
+[0m[33m    executable : std :: option :: Option < String > , args : std :: option ::
+[0m[33m    Option < Vec < String > > , env : std :: option :: Option < Vec < String >
+[0m[33m    > , current_dir : std :: option :: Option < String > ,
+[0m[33m} impl CommandBuilder
+[0m[33m{
+[0m[33m    fn executable(& mut self, executable : String) -> & mut Self
+[0m[33m    { self.executable = std :: option :: Option :: Some(executable); self } fn
+[0m[33m    args(& mut self, args : Vec < String >) -> & mut Self
+[0m[33m    { self.args = std :: option :: Option :: Some(args); self } fn
+[0m[33m    env(& mut self, env : Vec < String >) -> & mut Self
+[0m[33m    { self.env = std :: option :: Option :: Some(env); self } fn
+[0m[33m    current_dir(& mut self, current_dir : String) -> & mut Self
+[0m[33m    { self.current_dir = std :: option :: Option :: Some(current_dir); self }
+[0m[33m    pub fn build(& mut self) -> Result < Command, Box < dyn std :: error ::
+[0m[33m    Error >>
+[0m[33m    {
+[0m[33m        if self.executable.is_none() && ! false || self.args.is_none() && !
+[0m[33m        false || self.env.is_none() && ! false || self.current_dir.is_none()
+[0m[33m        && ! false || false { Err("Field is not set") ? }
+[0m[33m        Ok(Command
+[0m[33m        {
+[0m[33m            executable : self.executable.clone().unwrap(), args :
+[0m[33m            self.args.clone().unwrap(), env : self.env.clone().unwrap(),
+[0m[33m            current_dir : self.current_dir.clone().unwrap(),
+[0m[33m        })
+[0m[33m    }
+[0m[33m}
+[0m[33m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+[0m
+test [0m[1mtests/06-optional-field.rs[0m ... [0m[32mok
+[0m
+[0m[1m[33mSTDERR:
+[0m[33m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+[0m[33mwarning: unused import: `std::rc::Rc`
+[0m[33m --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:1:5
+[0m[33m  |
+[0m[33m1 | use std::rc::Rc;
+[0m[33m  |     ^^^^^^^^^^^
+[0m[33m  |
+[0m[33m  = note: `#[warn(unused_imports)]` on by default
+[0m[33m
+[0m[33mwarning: unused import: `token::Token`
+[0m[33m --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:6:24
+[0m[33m  |
+[0m[33m6 |     parse_macro_input, token::Token, Data, DeriveInput, Field, Fields, GenericArgument, Ident,
+[0m[33m  |                        ^^^^^^^^^^^^
+[0m[33m
+[0m[33mwarning: unused variable: `field_types`
+[0m[33m   --> /Users/elyzk1/programming/rust/proc-macro-workshop/builder/src/lib.rs:122:9
+[0m[33m    |
+[0m[33m122 |     let field_types = data.get_ty();
+[0m[33m    |         ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_field_types`
+[0m[33m    |
+[0m[33m    = note: `#[warn(unused_variables)]` on by default
+[0m[33m
+[0m[33mEYYYY
+[0m[33mIMPL: impl Command
+[0m[33m{
+[0m[33m    pub fn builder() -> CommandBuilder
+[0m[33m    {
+[0m[33m        CommandBuilder
+[0m[33m        { executable : None, args : None, env : None, current_dir : None, }
+[0m[33m    }
+[0m[33m}
+[0m[33mTOKENS: impl Command
+[0m[33m{
+[0m[33m    pub fn builder() -> CommandBuilder
+[0m[33m    {
+[0m[33m        CommandBuilder
+[0m[33m        { executable : None, args : None, env : None, current_dir : None, }
+[0m[33m    }
+[0m[33m} pub struct CommandBuilder
+[0m[33m{
+[0m[33m    executable : std :: option :: Option < String > , args : std :: option ::
+[0m[33m    Option < Vec < String > > , env : std :: option :: Option < Vec < String >
+[0m[33m    > , current_dir : std :: option :: Option < String > ,
+[0m[33m} impl CommandBuilder
+[0m[33m{
+[0m[33m    fn executable(& mut self, executable : String) -> & mut Self
+[0m[33m    { self.executable = std :: option :: Option :: Some(executable); self } fn
+[0m[33m    args(& mut self, args : Vec < String >) -> & mut Self
+[0m[33m    { self.args = std :: option :: Option :: Some(args); self } fn
+[0m[33m    env(& mut self, env : Vec < String >) -> & mut Self
+[0m[33m    { self.env = std :: option :: Option :: Some(env); self } fn
+[0m[33m    current_dir(& mut self, current_dir : String) -> & mut Self
+[0m[33m    { self.current_dir = std :: option :: Option :: Some(current_dir); self }
+[0m[33m    pub fn build(& mut self) -> Result < Command, Box < dyn std :: error ::
+[0m[33m    Error >>
+[0m[33m    {
+[0m[33m        if self.executable.is_none() && ! false || self.args.is_none() && !
+[0m[33m        false || self.env.is_none() && ! false || self.current_dir.is_none()
+[0m[33m        && ! true || false { Err("Field is not set") ? }
+[0m[33m        Ok(Command
+[0m[33m        {
+[0m[33m            executable : self.executable.clone().unwrap(), args :
+[0m[33m            self.args.clone().unwrap(), env : self.env.clone().unwrap(),
+[0m[33m            current_dir : self.current_dir.clone(),
+[0m[33m        })
+[0m[33m    }
+[0m[33m}
+[0m[33m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+[0m
+
+
+   Doc-tests derive_builder
